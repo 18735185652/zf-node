@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(1);
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET','use.json',true);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4&&xhr.status==200){
+            alert(xhr.responseText)
+        }
+    }
+    xhr.send();
+
+    setTimeout(function(){
+        alert(2)
+    },1000)
+    console.log(3);
+
+</script>
+</body>
+</html>

@@ -67,14 +67,14 @@ function Promise(exeuctor){
     function resolve(value){ //2.1.1
         //如果返回的值为promise的实例，先让值成功或失败在往下走
        if(value instanceof Promise){
-          return  value.then(resolve,reject)
+          return  value.then(resolve,reject);
        }
         //如果是初始态，则转成成功态
         if(self.status ===PENDING){
             self.status = FULFILLED;
             self.value=value; //成功后会得到一个值，这个值不能改
             //调用所有成功的回调
-            self.onResolvedCallbacks.forEach(cb=>cb(self.value))
+            self.onResolvedCallbacks.forEach(cb=>cb(self.value));
         }
     }
     function reject(reason){//2.1.2
