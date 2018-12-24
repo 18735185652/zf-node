@@ -18,10 +18,11 @@
 
 //argv 如何写一个vue-cli脚手架
 //chdir cwd  memoryUsage
+//cwd current working directory 当前工作目录
 console.log(process);
 //chdir是change direcotry 改变当前的工作目录
-process.chdir('..');
-console.log(process.cwd());
+process.chdir('..'); //切换到上级目录
+console.log(process.cwd()); //
 
 //V8引擎最大使用内存量是1.7个G
 console.log(process.memoryUsage());  //内存使用量
