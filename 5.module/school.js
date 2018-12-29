@@ -8,3 +8,4 @@ let age = 9;
 
 */
 module.exports = {name,age};
+console.log(global)

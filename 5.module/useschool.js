@@ -6,13 +6,13 @@ let school = require('./school');
 在node.js里通过require方法加载其他模块
 这个加载是同步的
 1.找到这个文件
-2.赌球文件模块的内容
+2.读取此文件模块的内容
 3.把它封装在一个函数里执行  
 dirname 取得当前模块文件的所有的目录的绝对路径  
 
 当前模块的导出对象  require方法  当前模块(this) 当前文件的绝对路径  当前文件夹的绝对路径
 var args = [this.exports,require,this,filename,dirname]
-在模块内部  this.exports 
+在模块内部  this.exports等于当前模块导出对象，就等于this
 4.执行后把模块的module。exports
 
 
@@ -35,7 +35,7 @@ var args = [this.exports,require,this,filename,dirname]
 */
 // console.log(Object.keys(require.cache));
 
-console.log(require);
+console.log(global);
 
 /*
 resolve  //只想知道模块的路径，但又不想加载这个模块
